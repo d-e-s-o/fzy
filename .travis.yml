@@ -7,6 +7,9 @@ compiler:
 os:
   - linux
   - osx
+env:
+  global:
+    - CFLAGS="-Werror -fsanitize=undefined,thread"
 script: make && make check
 jobs:
   include:
